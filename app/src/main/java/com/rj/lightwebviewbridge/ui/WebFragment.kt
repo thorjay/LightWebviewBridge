@@ -49,8 +49,7 @@ class WebFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initWeviewSetting()
         WebViewBridge.initJsInterface(bridgeContext,mWebview)
-//        mWebview.loadUrl("file:///android_asset/dist/web/index.html")
-        mWebview.loadUrl("http://42.193.130.88:8086/")
+        mWebview.loadUrl("file:///android_asset/web/dist/index.html")
     }
 
     private fun initWeviewSetting(){
