@@ -1,0 +1,93 @@
+[versions]
+androidx-core = "1.7.0"
+androidx-core-testing = "2.2.0"
+android-material = '1.5.0'
+androidx-appcompat = '1.4.1'
+androidx-constraintlayout = '2.1.3'
+androidx-lifecycle-livedata = '2.4.1'
+androidx-lifecycle-viewmodel = '2.4.1'
+androidx-legacy-support-v4 = '1.0.0'
+androidx-test-core-ktx = "1.5.0"
+androidx-test-rules = "1.5.0"
+androidx-test-runner = "1.5.2"
+androidx-test-orchestrator = "1.4.2"
+androidx-test-services = "1.4.2"
+androidx-test-junit = "1.1.3"
+androidx-test-espresso = "3.4.0"
+androidx-annotation = '1.4.0'
+androidannotations-api = '4.7.0'
+androidannotations = '4.7.0'
+
+kotlin-stdlib = '1.4.32'
+
+junit = '4.13.2'
+kotlin = '1.7.10'
+agp = '7.3.0'
+mqttv5 = '1.2.5'
+jackson = '2.12.3'
+permissionX = '1.7.1'
+okhttp = '3.14.9'
+retrofit = '2.9.0'
+retrofit-conveter-jackson = '2.9.0'
+rxjava = '3.1.6'
+rxandroid = '3.0.2'
+lombok = '1.18.20'
+blankj-util = '1.9.9'
+timber = '5.0.1'
+slf4j-api = '2.0.7'
+logback-android = '3.0.0'
+hutool = '5.8.21'
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+[libraries]
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx-core" }
+android-material = { module = "com.google.android.material:material", version.ref = "android-material" }
+androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "androidx-constraintlayout" }
+androidx-lifecycle-livedata = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "androidx-lifecycle-livedata" }
+androidx-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle-viewmodel" }
+androidx-appcompat = {module = 'androidx.appcompat:appcompat',version.ref = 'androidx-appcompat'}
+androidx-legacy-support-v4 = {module = 'androidx.legacy:legacy-support-v4',version.ref = 'androidx-legacy-support-v4'}
+
+androidx-core-testing = { module = "androidx.arch.core:core-testing", version.ref = "androidx-core-testing" }
+androidx-test-junit = { module = "androidx.test.ext:junit", version.ref = "androidx-test-junit" }
+androidx-test-core-ktx = { module = "androidx.test:core-ktx", version.ref = "androidx-test-core-ktx" }
+androidx-test-rules = { module = "androidx.test:rules", version.ref = "androidx-test-rules" }
+junit = {module = "junit:junit",version.ref = "junit"}
+androidx-espresso-core = {module = "androidx.test.espresso:espresso-core",version.ref = "androidx-test-espresso"}
+androidx-annotation = {module = 'androidx.annotation:annotation',version.ref = 'androidx-annotation'}
+androidannotations-api = {module = 'org.androidannotations:androidannotations-api',version.ref = 'androidannotations-api'}
+androidannotations = {module = 'org.androidannotations:androidannotations',version.ref = 'androidannotations'}
+
+kotlin-stdlib = {module = 'org.jetbrains.kotlin:kotlin-stdlib',version.ref = 'kotlin-stdlib'}
+
+mqtt-paco = {module = 'org.eclipse.paho:org.eclipse.paho.mqttv5.client',version.ref = "mqttv5"}
+jackson-core = { module = "com.fasterxml.jackson.core:jackson-core", version.ref = "jackson" }
+jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson" }
+jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "jackson" }
+permissionX = {module = 'com.guolindev.permissionx:permissionx' ,version.ref = "permissionX"}
+okhttp = {module = 'com.squareup.okhttp3:okhttp',version.ref = 'okhttp'}
+retrofit = {module = 'com.squareup.retrofit2:retrofit',version.ref = 'retrofit'}
+retrofit-conveter-jackson = {module = 'com.squareup.retrofit2:converter-jackson',version.ref = 'retrofit-conveter-jackson'}
+rxjava = {module = 'io.reactivex.rxjava3:rxjava',version.ref = 'rxjava'}
+rxandroid = {module = 'io.reactivex.rxjava3:rxandroid',version.ref = 'rxandroid'}
+adapter-rxjava = {module = 'com.squareup.retrofit2:adapter-rxjava3',version.ref = 'retrofit'}
+lombok = {module = 'org.projectlombok:lombok',version.ref = 'lombok'}
+blankj-util = {module = 'com.blankj:utilcode',version.ref = 'blankj-util'}
+timber = {module = 'com.jakewharton.timber:timber',version.ref = 'timber'}
+slf4j-api = {module = 'org.slf4j:slf4j-api',version.ref = 'slf4j-api'}
+logback-android = {module = 'com.github.tony19:logback-android',version.ref = 'logback-android'}
+hutool = {module = 'cn.hutool:hutool-all',version.ref = 'hutool'}
+
+
+[bundles]
+jackson = ["jackson-core",'jackson-databind','jackson-module-kotlin']
+androidx = ["androidx-core-ktx", 'androidx-appcompat',"android-material","androidx-constraintlayout","androidx-lifecycle-livedata","androidx-lifecycle-viewmodel",'androidx-legacy-support-v4']
+androidx-test = ["androidx-test-junit", "androidx-test-core-ktx", "androidx-test-rules"]
+net-bundle = ['okhttp','retrofit','retrofit-conveter-jackson']
+rx-bundle = ['rxjava','rxandroid','adapter-rxjava']
+log = ['timber','slf4j-api','logback-android']

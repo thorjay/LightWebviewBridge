@@ -1,0 +1,70 @@
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>
+        布里吉
+    </title>
+    <script src="Bridge.js"></script>
+</head>
+
+<body>
+    <p># 场景1:获取设备信息 </p>
+    <button id="getInfo" onclick="getInfo()">获取设备信息</button>
+    <p id="mobileInfo">
+    </p>
+
+    <p># 场景2:生成二维码</p>
+    <div>输入信息:</div>
+    <textarea id="qrData" style="height: 50px;width: 360px">LightWebviewBridge是一个轻量级的HybridAPP解决方案工具</textarea>
+    <p></p>
+    <button id="createQr" onclick="createQr()">点击生成二维码</button>
+
+    <img src="" v-show="false" id="qrImg" style="width: 120px;height: 120px;display: none"></img>
+
+    <p># 场景3:扫描二维码</p>
+    <button id="scanQR" onclick="scanQR()">点击扫码</button>
+    <p>扫码结果:</p><p id="scanResult"></p>
+
+    <p># 场景4:打电话</p>
+    <div>
+        <input id="tel"/>
+        <button id="call" onclick="tel()">
+            call
+        </button>
+    </div>
+</body>
+
+<script>
+
+    function getInfo(){
+        callToNative("getMobileInfo",null,function (response) {
+            console.log("mobileInfo:" + response);
+            document.getElementById("mobileInfo").innerHTML = response
+        })
+    }
+
+    function createQr(){
+        let data = document.getElementById("qrData").value
+        console.log("createQr ,data:" + data)
+        callToNative("createQr",data,function (response) {
+            console.log("mobileInfo:" + response);
+            document.getElementById("qrImg").style.display = ""
+            document.getElementById("qrImg").src = "data:image/jpeg;base64," + response
+        })
+    }
+
+    function scanQR(){
+        callToNative("scanQR",null,function (response) {
+            console.log("scanQR:" + response)
+            document.getElementById("scanResult").innerHTML = response
+        })
+    }
+
+    function tel() {
+        let tel = document.getElementById("tel").value;
+        console.log(`电话：${tel}`);
+        callToNative("call",tel);
+    }
+</script>
+
+</html>

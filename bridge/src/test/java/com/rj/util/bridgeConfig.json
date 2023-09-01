@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "call": {
+      "methodName": "call",
+      "className": "com.rj.bridge.Call"
+    },
+    "test": {
+      "methodName": "test",
+      "className": "com.rj.bridge.Test"
+    }
+  }
+}

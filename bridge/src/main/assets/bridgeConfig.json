@@ -1,0 +1,8 @@
+{
+  "functions": {
+    "test": {
+      "methodName": "test",
+      "className": "com.rj.bridge.Test"
+    }
+  }
+}

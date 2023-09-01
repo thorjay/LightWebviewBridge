@@ -1,0 +1,54 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.rj.lightwebviewbridge'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.rj.lightwebviewbridge"
+        minSdk 23
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+
+}
+
+dependencies {
+
+    implementation fileTree(dir:'./libs',include:['*.jar','*.aar'])
+
+    implementation libs.bundles.androidx
+    testImplementation libs.junit
+    androidTestImplementation libs.bundles.androidx.test
+
+    api project(':bridge')
+    implementation libs.bundles.log
+
+    implementation 'com.blankj:utilcodex:1.31.1'
+    implementation 'com.github.jenly1314:zxing-lite:3.0.0'
+}

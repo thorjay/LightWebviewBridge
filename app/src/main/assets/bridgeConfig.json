@@ -1,0 +1,20 @@
+{
+  "functions": {
+    "call": {
+      "methodName": "call",
+      "className": "com.rj.lightwebviewbridge.functions.Call"
+    },
+    "getMobileInfo": {
+      "methodName": "getInfo",
+      "className": "com.rj.lightwebviewbridge.functions.MobileInfo"
+    },
+    "createQr": {
+      "methodName": "createQr",
+      "className": "com.rj.lightwebviewbridge.functions.Qr"
+    },
+    "scanQR": {
+      "methodName": "scanQR",
+      "className": "com.rj.lightwebviewbridge.functions.Qr"
+    }
+  }
+}

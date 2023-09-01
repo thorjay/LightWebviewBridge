@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LightWebviewBridge</string>
+    <string name="url">file:///android_asset/web/index.html</string>
+</resources>
