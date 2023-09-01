@@ -1,6 +1,6 @@
 # 🌁LightWebviewBridge
 
-`LightWebviewBridge`定位为一个轻量级、小而美的Hybrid混合APP解决方案工具，帮助开发者快速实现H5APP或内嵌H5界面功能，只聚焦于业务功能开发，而不用关注H5和Native的通信实现，便可快速相应业务功能，达到类似`小程序、公众号`的效果；
+`LightWebviewBridge`定位为一个轻量级、小而美的Hybrid混合APP解决方案工具，帮助开发者快速实现H5APP或内嵌H5界面功能，只聚焦于业务功能开发，而不用关注H5和Native的通信实现，便可快速实现相应业务功能，达到类似`小程序、公众号`的效果；
 
 ## 效果
 
